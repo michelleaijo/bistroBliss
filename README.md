@@ -1,27 +1,111 @@
-# BistroBliss
+```markdown
+# 🌿 BistroBliss  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+BistroBliss is a modern **Angular 15 application** built for restaurant management.  
+It features authentication, dashboards, order handling, and a clean modular architecture.  
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📂 Project Structure  
 
-## Code scaffolding
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+src/app
+┣ components/          # Reusable UI components
+┃ ┣ auth/              # Authentication (login/signup)
+┃ ┣ carousel/          # Image carousel
+┃ ┣ dashboard/         # Dashboard view
+┃ ┣ dashnav/           # Dashboard navigation
+┃ ┣ landing/           # Landing page
+┃ ┗ orders/            # Order management
+┣ resto/               # Restaurant-specific modules
+┣ models/              # Data models & interfaces
+┣ services/            # API and business logic
+┣ app-routing.module.ts  # App routing
+┣ app.module.ts          # Root Angular module
+┗ app.component.\*        # Root Angular component
 
-## Build
+````
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🚀 Getting Started  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 1. Clone the repository  
+```bash
+git clone https://github.com/michelleaijo/bistroBliss.git
+cd bistroBliss
+````
 
-## Running end-to-end tests
+### 2. Install dependencies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+# or
+yarn install
+```
 
-## Further help
+### 3. Run the development server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng serve
+```
+
+Navigate to 👉 [http://localhost:4200](http://localhost:4200).
+The app will reload automatically when source files are updated.
+
+---
+
+## 🗄️ Mock Backend (json-server)
+
+This project includes a `db.json` file for simulating a REST API.
+
+Run:
+
+```bash
+npx json-server --watch db.json --port 3000
+```
+
+The mock API will be available at:
+👉 `http://localhost:3000/`
+
+---
+
+## 🧪 Testing
+
+### Unit tests
+
+```bash
+ng test
+```
+
+Runs unit tests via [Karma](https://karma-runner.github.io).
+
+### End-to-end tests
+
+```bash
+ng e2e
+```
+
+Executes e2e tests using a chosen framework.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Angular 15 (CLI v15.2.11)**
+* **TypeScript**
+* **json-server** (mock REST API)
+* **Karma & Jasmine** (testing)
+
+---
+
+## 📚 Resources
+
+* [Angular Documentation](https://angular.io/docs)
+* [Angular CLI Reference](https://angular.io/cli)
+* [json-server](https://github.com/typicode/json-server)
+
+---
+
+✨ **BistroBliss** – A clean, modular Angular project for building scalable restaurant management solutions.
