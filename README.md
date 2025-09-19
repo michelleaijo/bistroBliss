@@ -20,9 +20,6 @@ It provides authentication, dashboards, order management, and a clean modular ar
 
 
 ## 📂 Project structure
-
-```
-
 src/
 ├─ app/
 │  ├─ components/
