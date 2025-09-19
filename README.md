@@ -87,7 +87,6 @@ Adjust service endpoints in your Angular services if the base URL differs.
 ---
 
 ## 🧪 Scripts & useful commands
-
 ```bash
 # start dev server
 ng serve
@@ -109,7 +108,6 @@ ng lint
 ---
 
 ## 🤝 Contributing
-
 1. Fork the repository.
 2. Create a feature branch: `git checkout -b feat/your-feature`
 3. Make changes and commit with clear messages.
@@ -118,7 +116,6 @@ ng lint
 ---
 
 ## 📝 Notes & tips
-
 * Keep components small and focused; put shared logic in services.
 * Use environment files for API base URLs (`src/environments/`).
 * If you use `json-server`, remember it's for development only — replace with a real backend for production.
