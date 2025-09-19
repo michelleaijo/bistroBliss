@@ -34,7 +34,7 @@ src/
 │  ├─ services/        # API calls and business logic
 │  ├─ app-routing.module.ts
 │  ├─ app.module.ts
-│  └─ app.component.\*
+│  └─ app.component.
 ├─ assets/             # Images, icons, static files
 ├─ index.html
 ├─ main.ts
