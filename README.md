@@ -7,6 +7,13 @@ It features authentication, dashboards, order handling, and a clean modular arch
 ---
 
 ## 📂 Project Structure  
+Got it 👍 — the **Project Structure** block lost its formatting when you pasted it.
+Here’s the fixed, clean `README.md` section with proper **code block formatting**:
+
+---
+
+```markdown
+## 📂 Project Structure  
 
 ```
 
@@ -25,7 +32,12 @@ src/app
 ┣ app.module.ts          # Root Angular module
 ┗ app.component.\*        # Root Angular component
 
-````
+```
+```
+
+---
+
+👉 If you want, I can give you the **entire README again** with this fix included so you can just copy-paste it straight into GitHub. Want me to do that?
 
 ---
 
