@@ -1,0 +1,72 @@
+.orders {
+  background-color: #bdc3c7;
+  padding: 30px;
+  width: 30%;
+  min-width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.orders h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.order-item {
+  background: #ecf0f1;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.empty-message {
+  color: #555;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.item-qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-qty button {
+  background-color: #57b1a2;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #e74c3c;
+}

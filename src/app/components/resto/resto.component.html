@@ -1,0 +1,60 @@
+<div class="restaurant-detail side-panel">
+  <button class="close-btn" (click)="onClose()">Close</button>
+
+  <div *ngIf="!editMode && restaurant">
+    <h2>{{ restaurant.name }}</h2>
+    <img [src]="restaurant.image" alt="{{ restaurant.name }}" class="resto-image" />
+
+    <p><strong>Description:</strong> {{ restaurant.description }}</p>
+    <p><strong>Details:</strong> {{ restaurant.detailedDescription }}</p>
+    <p><strong>Rating:</strong> {{ restaurant.rating }}/5</p>
+    <p><strong>Average Price:</strong> ${{ restaurant.price }}</p>
+    
+    <button class="edit-btn" (click)="enableEdit()">✏️ Edit</button>
+  </div>
+
+  <div *ngIf="editMode && editedRestaurant">
+    <h2>Edit Restaurant</h2>
+
+    <label>
+      Name:
+      <input [(ngModel)]="editedRestaurant.name" />
+    </label>
+    <br />
+
+    <label>
+      Image URL:
+      <input [(ngModel)]="editedRestaurant.image" />
+    </label>
+    <br />
+
+    <label>
+      Description:
+      <textarea [(ngModel)]="editedRestaurant.description"></textarea>
+    </label>
+    <br />
+
+    <label>
+      Detailed Description:
+      <textarea [(ngModel)]="editedRestaurant.detailedDescription"></textarea>
+    </label>
+    <br />
+
+    <label>
+      Rating:
+      <input type="number" min="0" max="5" step="0.1" [(ngModel)]="editedRestaurant.rating" />
+    </label>
+    <br />
+
+    <label>
+      Average Price:
+      <div *ngIf="editedRestaurant">
+        <input type="number" min="0" [(ngModel)]="editedRestaurant.price" />
+      </div>
+    </label>
+    <br />
+
+    <button (click)="saveChanges()" id="save-butt">Save</button>
+    <button (click)="cancelEdit()" id="cancel-butt">Cancel</button>
+  </div>
+</div>

@@ -1,0 +1,200 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.create {
+  max-width: 500px;
+  margin: 3rem 0 5rem 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.create::-webkit-scrollbar {
+  display: none;
+}
+
+.create .acc-form form {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+:host ::ng-deep .form-field {
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.w-6rem {
+  width: 6rem;
+}
+.w-full {
+  flex: 1;
+}
+
+.create h2 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.create .logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.create .acc-form,
+.create .acc-form form {
+  width: 100%;
+}
+
+:host ::ng-deep input,
+:host ::ng-deep p-password input,
+:host ::ng-deep .p-dropdown {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+:host ::ng-deep .form-field {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+:host ::ng-deep .p-password {
+  width: 100%;
+}
+
+.phone-field {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.phone-field :host ::ng-deep .p-dropdown {
+  flex: 0 0 6rem;
+}
+
+.phone-field input {
+  flex: 1;
+}
+
+label {
+  color: #399787;
+}
+
+small.p-error {
+  color: #f44336;
+  font-size: 0.75rem;
+}
+
+.submit-button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+:host ::ng-deep button .submit-button {
+  text-align: center;
+}
+
+.or-bar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #399787;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.or-bar::before,
+.or-bar::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.or-bar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.or-bar::before,
+.or-bar::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-login-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.google-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1f1f1f00;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #00000000;
+  text-decoration: none;
+}
+
+
+.login-redirect {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.login-redirect a {
+  color: #2d9f99;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}

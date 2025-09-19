@@ -1,0 +1,47 @@
+<p-toast></p-toast>
+
+<div class="create">
+  <h2>Login</h2>
+
+  <section class="acc-form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+      <!-- Email -->
+      <div class="form-field p-float-label">
+        <input
+          id="email"
+          pInputText
+          formControlName="email"
+          [ngClass]="{ 'ng-invalid': isInvalid('email') }"
+          autocomplete="off"
+        />
+        <label for="email">Email</label>
+        <small *ngIf="isInvalid('email')" class="p-error">
+          Valid email is required.
+        </small>
+      </div>
+
+      <!-- Password -->
+      <div class="form-field p-float-label" style="margin-top: 1rem;">
+        <p-password
+          formControlName="password"
+          [toggleMask]="true"
+          [feedback]="false"
+          placeholder="Password"
+        ></p-password>
+        <label for="password">Password</label>
+        <small *ngIf="isInvalid('password')" class="p-error">
+          Password is required.
+        </small>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" pButton class="submit-button">Login</button>
+    </form>
+
+    <br />
+
+    <div class="create-redirect">
+      Don't have an account? <a routerLink="/create">Sign Up</a>
+    </div>
+  </section>
+</div>

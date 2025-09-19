@@ -1,0 +1,37 @@
+<div class="top">
+
+  <div class="search-container">
+    <input
+      type="text"
+      pInputText
+      placeholder="Search..."
+      [(ngModel)]="searchQuery"
+      (input)="onSearch()"
+      class="search-bar"
+    />
+    <div class="search-results" *ngIf="searchResults.length > 0">
+      <div class="result-item" *ngFor="let meal of searchResults">
+        <img [src]="meal.image" alt="{{ meal.name }}" width="40" height="40" />
+        <span>{{ meal.name }}</span>
+        <span class="price">{{ meal.price | currency }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <div class="dropdown" [class.show]="settingsOpen" (click)="$event.stopPropagation()">
+      <button class="icon-btn settings-toggle" (click)="toggleSettings()" title="Settings">⚙️</button>
+      <div class="dropdown-menu settings-panel" *ngIf="settingsOpen">
+        <button class="dropdown-item" (click)="logout()">Logout</button>
+      </div>
+    </div>
+
+    <button class="icon-btn cart-btn" title="Cart">
+      🛒<span *ngIf="cartCount > 0" class="badge">{{ cartCount }}</span>
+    </button>
+
+    <button class="icon-btn" title="Profile">👤</button>
+
+    <button class="primary-btn" (click)="onViewOrdersClick()">View Orders</button>
+  </div>
+</div>

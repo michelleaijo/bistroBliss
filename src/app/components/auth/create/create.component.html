@@ -1,0 +1,135 @@
+<p-toast></p-toast>
+
+<div class="create">
+  <h2>Create Account</h2>
+
+  <section class="acc-form">
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()" novalidate>
+
+      <!-- Full Name -->
+      <div class="form-field p-float-label">
+        <input
+          id="fullName"
+          pInputText
+          formControlName="fullName"
+          [ngClass]="{ 'ng-invalid': isInvalid('fullName') }"
+          autocomplete="off"
+        />
+        <label for="fullName">Full Name</label>
+        <small *ngIf="isInvalid('fullName')" class="p-error">
+          Full name required.
+        </small>
+      </div>
+
+      <!-- Email -->
+      <div class="form-field p-float-label" style="margin-top: 1rem;">
+        <input
+          id="email"
+          pInputText
+          formControlName="email"
+          [ngClass]="{ 'ng-invalid': isInvalid('email') }"
+          autocomplete="off"
+        />
+        <label for="email">Email</label>
+        <small *ngIf="isInvalid('email')" class="p-error">
+          Valid email required.
+        </small>
+      </div>
+
+      <!-- Phone Number + Country Code -->
+      <div class="form-field phone-field flex align-items-center gap-2" style="margin-top: 1rem;">
+        <p-dropdown
+          [options]="countryCodes"
+          formControlName="countryCode"
+          optionLabel="label"
+          optionValue="value"
+          styleClass="w-6rem"
+        ></p-dropdown>
+
+        <input
+          pInputText
+          formControlName="phoneNumber"
+          placeholder="Phone number"
+        />
+      </div>
+
+      <small *ngIf="isInvalid('phoneNumber')" class="p-error">
+        Valid phone number required.
+      </small>
+
+      <!-- Password -->
+      <div class="form-field p-float-label" style="margin-top: 1rem;">
+        <p-password
+          formControlName="password"
+          [toggleMask]="true"
+          [feedback]="false"
+          placeholder="Password"
+        ></p-password>
+        <label for="password">Password</label>
+        <small *ngIf="isInvalid('password')" class="p-error">
+          Password required.
+        </small>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-field p-float-label" style="margin-top: 1rem;">
+        <p-password
+          formControlName="confirmPassword"
+          [toggleMask]="true"
+          [feedback]="false"
+          placeholder="Confirm Password"
+        ></p-password>
+        <label for="confirmPassword">Confirm Password</label>
+        <small *ngIf="isInvalid('confirmPassword')" class="p-error">
+          Confirm password required.
+        </small>
+        <small
+          *ngIf="createForm.get('confirmPassword')?.errors?.['mismatch'] && formSubmitted"
+          class="p-error"
+        >
+          Passwords do not match.
+        </small>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="form-field flex align-items-center gap-2" style="margin-top: 1rem;">
+        <p-checkbox
+          formControlName="terms"
+          [binary]="true"
+          inputId="terms"
+          [ngClass]="{ 'ng-invalid': isInvalid('terms') }"
+        ></p-checkbox>
+        <label for="terms">I agree to the Terms and Conditions</label>
+      </div>
+      <small *ngIf="isInvalid('terms')" class="p-error">
+        You must accept the terms and conditions.
+      </small>
+
+      <!-- Submit -->
+      <button
+        type="submit"
+        pButton
+        class="submit-button"
+      >
+        Create
+      </button>
+    </form>
+
+    <div class="or-bar">
+      <span>OR</span>
+    </div>
+
+    <!-- Social -->
+    <div class="social-login-container">
+      <button pButton type="button" class="google-btn">
+        <i class="pi pi-google" style="margin-right: 8px;"></i>
+        Sign up with Google
+      </button>
+    </div>
+
+    <div class="login-redirect">
+      Already a user?
+      <a routerLink="/login">Login</a>
+    </div>
+  </section>
+</div>

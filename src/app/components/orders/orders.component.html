@@ -1,0 +1,19 @@
+<div class="orders">
+  <h2>Your Orders</h2>
+
+  <div *ngIf="cartItems.length === 0" class="empty-message">
+    No items in your cart.
+  </div>
+
+  <div *ngFor="let item of cartItems" class="order-item">
+    <div class="item-info">
+      <div class="item-name">{{ item.name }}</div>
+      <div class="item-qty">
+        <button (click)="decreaseQuantity(item)">−</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="increaseQuantity(item)">+</button>
+      </div>
+    </div>
+    <button class="remove-btn" (click)="removeItem(item)">🗑️</button>
+  </div>
+</div>

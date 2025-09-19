@@ -1,0 +1,108 @@
+<p-carousel 
+  [value]="products" 
+  [numVisible]="3" 
+  [numScroll]="1" 
+  [circular]="true"  
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template pTemplate="item" let-product>
+    <div class="product-item">
+      <div class="product-item-content">
+        <div class="mb-3">
+          <img 
+            [src]="product.image" 
+            alt="{{ product.name }}" 
+            class="product-image" 
+          />
+        </div>
+        <div>
+          <h4 class="mb-1">{{ product.name }}</h4>
+          <p class="mb-1">{{ product.description }}</p>
+          <h5 class="mb-1">${{ product.price }}</h5>
+
+          <button 
+            *ngIf="showCartIcons" 
+            class="icon-btn add-to-cart" 
+            (click)="addToCartEvent.emit(product)"
+          >
+            🛒 Add to Cart
+          </button>
+
+          <div *ngIf="!showCartIcons">
+            <button 
+              class="desc-btn" 
+              (click)="showDescription(product)"
+            >
+              Show Description
+            </button>
+          </div>
+
+          <button 
+            class="edit-btn" 
+            (click)="editItem(product)"
+          >
+            ✏️
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
+
+<!-- Edit Popup -->
+<div class="edit-popup" *ngIf="displayEditDialog">
+  <div class="edit-popup-content">
+    <h3>Edit Product</h3>
+
+    <form [formGroup]="editForm" (ngSubmit)="saveEditedMeal()">
+      <label>
+        Name:
+        <input type="text" formControlName="name" />
+      </label>
+      <div 
+        *ngIf="editForm.controls['name'].invalid && editForm.controls['name'].touched" 
+        class="error"
+      >
+        Name is required.
+      </div>
+
+      <label>
+        Description:
+        <textarea formControlName="description"></textarea>
+      </label>
+      <div 
+        *ngIf="editForm.controls['description'].invalid && editForm.controls['description'].touched" 
+        class="error"
+      >
+        Description is required.
+      </div>
+
+      <label>
+        Price:
+        <input type="number" formControlName="price" />
+      </label>
+      <div 
+        *ngIf="editForm.controls['price'].invalid && editForm.controls['price'].touched" 
+        class="error"
+      >
+        Price must be a positive number.
+      </div>
+
+      <label>
+        Image URL:
+        <input type="text" formControlName="image" />
+      </label>
+      <div 
+        *ngIf="editForm.controls['image'].invalid && editForm.controls['image'].touched" 
+        class="error"
+      >
+        Image URL required.
+      </div>
+
+      <div class="popup-buttons">
+        <button type="submit" [disabled]="editForm.invalid">Save</button>
+        <button type="button" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

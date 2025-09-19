@@ -1,0 +1,121 @@
+<div class="dash">
+  <section class="collapse">
+    <h1>Bistro Bliss</h1>
+    <div id="profile">
+      <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" alt="Profile Image" />
+    </div>
+    <h1>Hi {{ user?.fullName }}</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Dashboard</a></li>
+        <li>
+          <a href="#" (click)="toggleOrders(); $event.preventDefault()" [class.active]="showOrders">Orders</a>
+        </li>
+        <li>
+          <a href="#" (click)="onShowDescription(favoriteRestaurants[0]); $event.preventDefault()">Restaurants</a>
+        </li>
+        <li>
+          <a href="#">Finance</a>
+        </li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="main">
+    <app-dashnav [cartCount]="cartCount" (viewOrdersClick)="toggleOrders()"></app-dashnav>
+
+    <div class="bottom">
+      <div class="center">
+        <h2>Top Meals
+          <button (click)="openAddMealDialog('topMeals')">Add</button>
+        </h2> 
+        <app-carousel
+          [products]="topMeals"
+          [showCartIcons]="true"
+          (mealUpdated)="onMealUpdated($event, 'topMeals')"
+          (addToCartEvent)="addToCart($event)">
+        </app-carousel>
+
+        <h2>Recommended Meals
+          <button (click)="openAddMealDialog('recommendedMeals')">Add</button>
+        </h2>
+        <app-carousel
+          [products]="recommendedMeals"
+          [showCartIcons]="true"
+          (mealUpdated)="onMealUpdated($event, 'recommendedMeals')"
+          (addToCartEvent)="addToCart($event)">
+        </app-carousel>
+
+        <h2>Your Favorite Restaurants</h2>
+        <app-carousel
+          [products]="favoriteRestaurants"
+          [showCartIcons]="false"
+          (showDescriptionEvent)="onShowDescription($event)"
+          (editEvent)="openEditRestaurant($event)">
+        </app-carousel>
+      </div>
+
+      <div class="side-panel" *ngIf="showOrders || selectedRestaurant">
+        <button class="close-btn" (click)="closePanels()">Close</button>
+        <br />
+        <div *ngIf="showOrders">
+          <app-orders></app-orders>
+        </div>
+
+        <div *ngIf="selectedRestaurant">
+          <app-restaurant-detail
+            [restaurant]="selectedRestaurant"
+            (close)="closePanels()"
+            (updated)="onRestaurantUpdated($event)">
+          </app-restaurant-detail>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<p-dialog 
+  header="Add New Meal" 
+  [(visible)]="showAddMealDialog" 
+  [modal]="true" 
+  [closable]="true" 
+  (onHide)="closeAddMealDialog()" 
+  [style]="{width: '400px'}"
+  [responsive]="true"
+>
+  <form (ngSubmit)="submitAddMeal()" #mealForm="ngForm">
+    <div class="p-field">
+      <label for="mealName">Name:</label>
+      <input type="text" id="mealName" required [(ngModel)]="newMeal.name" name="name" pInputText />
+    </div>
+
+    <div class="p-field">
+      <label for="mealDesc">Description:</label>
+      <textarea id="mealDesc" required [(ngModel)]="newMeal.description" name="description" rows="3" pInputTextarea></textarea>
+    </div>
+
+    <div class="p-field">
+      <label for="mealPrice">Price:</label>
+      <input type="number" id="mealPrice" required min="0" [(ngModel)]="newMeal.price" name="price" pInputText />
+    </div>
+
+    <div class="p-field">
+      <label for="mealImage">Image URL:</label>
+      <input type="url" id="mealImage" [(ngModel)]="newMeal.image" name="image" pInputText />
+    </div>
+
+    <div class="p-field">
+      <label for="mealCategory">Category:</label>
+      <select id="mealCategory" [(ngModel)]="newMeal.category" name="category" required class="p-inputtext p-component">
+        <option value="top">Top Meals</option>
+        <option value="recommended">Recommended Meals</option>
+      </select>
+    </div>
+
+    <p-footer>
+      <button type="button" pButton label="Cancel" icon="pi pi-times" class="p-button-text" (click)="closeAddMealDialog()"></button>
+      <button type="submit" pButton label="Add Meal" icon="pi pi-check" [disabled]="mealForm.invalid"></button>
+    </p-footer>
+  </form>
+</p-dialog>

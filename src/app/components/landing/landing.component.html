@@ -1,0 +1,51 @@
+<div>
+    <header>
+        <img src="assets/ramen.jpg" alt="Ramen Image" class="logo" width = "30em" height = "30em"/>
+        <nav>
+            <ul>
+                <li>
+                    <a href = "#">Home</a>
+                </li>
+                <li>
+                    <a href = "#">About</a>
+                </li>
+                <li>
+                    <a href = "#">Menu</a>
+                </li>
+                <li>
+                    <a href = "#">Pages</a>
+                </li>   
+                <li>    
+                    <a href = "#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--buttons-->
+        <div class="card flex flex-wrap gap-4 justify-center">
+            <button pButton severity="primary" [routerLink]="'/create'" raised="true">Create</button>
+            <button pButton severity="contrast" [routerLink]="'/login'" raised="true">Log In</button>
+        </div>
+    </header>
+
+    <section class = "mid">
+        <div id = "centered">
+            <h1 id = "bigWords">
+                Best food for your taste
+            </h1>
+            <h5 id = "tinyWords">
+                Discover delectable cuisine and unforgettable moments in our welcoming, culinary heaven.
+            </h5>
+
+            <!--buttons-->
+            <div class="card flex flex-wrap gap-4 justify-center">
+                <button pButton severity="primary" [routerLink]="'/login'" raised="true">Book a Table</button>
+                <button pButton severity="contrast" [routerLink]="'/login'" raised="true">Explore Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+</div>

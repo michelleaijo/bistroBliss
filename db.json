@@ -1,0 +1,253 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "John Doe",
+      "email": "john@example.com",
+      "password": "123456",
+      "cart": [
+        {
+          "productId": "1",
+          "name": "Grilled Chicken Salad",
+          "quantity": 1
+        },
+        {
+          "productId": "2",
+          "name": "Malaysian Rendang Curry",
+          "quantity": 1
+        },
+        {
+          "productId": "3",
+          "name": "Cappuccino",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "fullName": "Apple",
+      "email": "apple@gmail.com",
+      "countryCode": "+1",
+      "phoneNumber": "111111111",
+      "password": "confirm",
+      "id": 2,
+      "cart": [
+        {
+          "productId": "2",
+          "name": "Malaysian Rendang Curry",
+          "quantity": 2
+        },
+        {
+          "productId": "3",
+          "name": "Cappuccino",
+          "quantity": 1
+        },
+        {
+          "productId": "1000",
+          "name": "Burger",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "fullName": "a",
+      "email": "a@gmail.com",
+      "countryCode": "+1",
+      "phoneNumber": "11111111",
+      "password": "aaa",
+      "id": 3
+    },
+    {
+      "fullName": "Anil",
+      "email": "aniln@gmail.com",
+      "countryCode": "+91",
+      "phoneNumber": "123456789",
+      "password": "123qwe",
+      "id": 4,
+      "cart": [
+        {
+          "productId": "1002",
+          "name": "Grilled Chicken Salad",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "fullName": "Mimi",
+      "email": "mimi@gmail.com",
+      "countryCode": "+91",
+      "phoneNumber": "2222222222",
+      "password": "mimi",
+      "id": 5,
+      "cart": [
+        {
+          "productId": "1000",
+          "name": "Burger",
+          "quantity": 1
+        },
+        {
+          "productId": "2",
+          "name": "Malaysian Rendang Curry",
+          "quantity": 2
+        },
+        {
+          "productId": "4",
+          "name": "Organic Green Tea",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "recommendedMeals": [
+    {
+      "id": "1",
+      "name": "Grilled Chicken Salad",
+      "description": "Fresh greens with grilled chicken, cherry tomatoes, and vinaigrette",
+      "image": "https://media.istockphoto.com/id/169986941/photo/chicken-salad.jpg?s=1024x1024&w=is&k=20&c=mWlIitrFz5dq4GQhDtbK82VUBK7YQN39nX_RVeBB7PA=",
+      "price": 55,
+      "category": "Food",
+      "quantity": 18,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "2",
+      "name": "Malaysian Rendang Curry",
+      "description": "A rich coconut beef curry with tender meat, served with fragrant jasmine rice.",
+      "image": "https://media.istockphoto.com/id/1292422075/photo/beef-rendang-on-black-plate-at-black-slate-table-top-indonesian-padang-cuisine-meat-dish.jpg?s=1024x1024&w=is&k=20&c=_xTfi9ECh6wYkLcIJBTrrHytXWuvccKPKh9r8OejbZc=",
+      "price": 95,
+      "category": "Recommended Meal",
+      "quantity": 10,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "name": "Cappuccino",
+      "description": "Rich and creamy Italian coffee served authentic to the heritage.",
+      "image": "https://media.istockphoto.com/id/505168330/photo/cup-of-cafe-latte-with-coffee-beans-and-cinnamon-sticks.jpg?s=1024x1024&w=is&k=20&c=kXeItl86M_hlo05MA5S2fyiMvBIfZanPwzBccgMG8GI=",
+      "price": 5,
+      "category": "Drink",
+      "quantity": 50,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "4",
+      "name": "Organic Green Tea",
+      "description": "Refreshing and healthy organic green tea with anti oxidants.",
+      "image": "https://media.istockphoto.com/id/1299342760/photo/glass-cup-of-green-tea-with-fresh-tea-leaves-on-wooden-table-hot-drink-concept.jpg?s=1024x1024&w=is&k=20&c=0o01N_OzK2RaGK5WE5dloo_WkyEBevjyaCyP4THOHT4=",
+      "price": 8,
+      "category": "Drink",
+      "quantity": 30,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    }
+  ],
+  "topMeals": [
+    {
+      "id": "1000",
+      "name": "Burger",
+      "description": "Double cheese beef burger",
+      "image": "https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=1024x1024&w=is&k=20&c=XXp34bPwWkHPUXbZQRJpR1w2YUSpYZUB_yNdeDlVXlQ=",
+      "price": 444,
+      "category": "Food",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1001",
+      "name": "Pizza",
+      "description": "Cheesy pepperoni pizza",
+      "image": "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=1024x1024&w=is&k=20&c=faq73viCFGvfpKxcBuHcOI8kyT99B-p-jScipke-VuQ=",
+      "price": 5,
+      "category": "Food",
+      "quantity": 61,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "1002",
+      "name": "Grilled Chicken Salad",
+      "description": "Fresh greens with grilled chicken.",
+      "image": "https://media.istockphoto.com/id/185085641/photo/chicken-salad.jpg?s=1024x1024&w=is&k=20&c=jHZNxFdmVM-FxcTwpDGKx5Qwhlf6waNuauJyWwyfI_s=",
+      "price": 55,
+      "category": "Food",
+      "quantity": 18,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "1003",
+      "name": "Spaghetti Carbonara",
+      "description": "Classic pasta with creamy sauce and parmesan",
+      "image": "https://media.istockphoto.com/id/177413384/photo/pasta-with-carbonara.jpg?s=1024x1024&w=is&k=20&c=5ZRLITJjvwm0aEV6ynpdnJrjDmlraH-PD9mleSts6sQ=",
+      "price": 60,
+      "category": "Food",
+      "quantity": 20,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "SHeNx4Z",
+      "name": "Apple",
+      "description": "no docs",
+      "price": 150,
+      "image": "https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=1024x1024&w=is&k=20&c=d1zu5oXbrdTrk2AtTyUtvnWLF7ZeIbTgqSXabU4ABi4=",
+      "quantity": 0,
+      "inventoryStatus": "INSTOCK",
+      "rating": 0,
+      "category": "top"
+    }
+  ],
+  "favoriteRestaurants": [
+    {
+      "id": "3",
+      "name": "Italian Bistro",
+      "description": "Authentic Italian cuisine",
+      "detailedDescription": "Experience traditional Italian recipes passed down through generations, including hand-tossed pasta, wood-fired pizzas, and classic tiramisu.",
+      "image": "https://media.istockphoto.com/id/667442560/photo/restaurant-chilling-out-classy-lifestyle-reserved-concept.jpg?s=1024x1024&w=is&k=20&c=2hmVhcOYzS_YXw6fpSoRFP1qcYCv3u1gAo6Nis3fJ7k=",
+      "price": 90,
+      "category": "Restaurant",
+      "quantity": 10,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "4",
+      "name": "Sushi Haven",
+      "description": "Fresh sushi and Japanese dishes",
+      "detailedDescription": "Savor artisan sushi rolls, sashimi, and traditional Japanese dishes made with the freshest seafood and authentic flavors.",
+      "image": "https://media.istockphoto.com/id/1616721452/photo/anonymous-people-having-lunch-with-sushi.jpg?s=1024x1024&w=is&k=20&c=xugMgl6jjgqaPriMKE_5_dFBxK394AFZJb-D9M002EI=",
+      "price": 85,
+      "category": "Restaurant",
+      "quantity": 15,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "5",
+      "name": "Steakhouse Prime",
+      "description": "Premium steaks and fine dining experience",
+      "detailedDescription": "Indulge in the finest cuts of steak, expertly grilled and served with gourmet sides in an upscale, candle-lit ambiance.",
+      "image": "https://media.istockphoto.com/id/1175618134/photo/italian-food-is-so-much-more-than-just-pasta.jpg?s=612x612&w=0&k=20&c=TxHE0Dvfjpoh8JYRjLB_6Wh-ywlcKSGgcWgNSX-KkhU=",
+      "price": 120,
+      "category": "Restaurant",
+      "quantity": 8,
+      "inventoryStatus": "INSTOCK",
+      "rating": 3.2
+    },
+    {
+      "id": "6",
+      "name": "Vegan Delight",
+      "description": "Plant-based meals with organic ingredients",
+      "detailedDescription": "A haven for health-conscious food lovers offering creative, colorful, and nutrient-rich dishes made with seasonal organic produce.",
+      "image": "https://media.istockphoto.com/id/944478708/photo/couple-eating-lunch-with-fresh-salad-and-appetizers.jpg?s=1024x1024&w=is&k=20&c=pk85QHhpHZkxY6TrpV72yFLIIFQrNe7I2neY_y2gE6Q=",
+      "price": 70,
+      "category": "Restaurant",
+      "quantity": 12,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    }
+  ]
+}

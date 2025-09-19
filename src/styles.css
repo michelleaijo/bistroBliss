@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* 1. PrimeIcons (for icons) */
+@import "primeicons/primeicons.css";
+
+/* 2. PrimeNG base styles */
+@import "primeng/resources/primeng.min.css";
+
+/* 3. Aura Dark Purple theme */
+@import "primeng/resources/themes/lara-light-teal/theme.css";
+
+
+@font-face {
+  font-family: 'Iniya';
+  src: url('assets/fonts/iniya.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, .card {
+  font-family: 'Iniya', sans-serif; 
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
