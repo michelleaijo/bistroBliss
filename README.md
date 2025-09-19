@@ -122,7 +122,3 @@ ng lint
 * Keep components small and focused; put shared logic in services.
 * Use environment files for API base URLs (`src/environments/`).
 * If you use `json-server`, remember it's for development only — replace with a real backend for production.
-
----
-
-✨ **BistroBliss** — clean, modular, and ready to extend.
