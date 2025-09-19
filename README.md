@@ -27,7 +27,7 @@ src/
 ├─ db.json             # Mock API data (json-server)
 └─ README.md
 
-````
+```
 
 ---
 
