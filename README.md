@@ -1,123 +1,128 @@
 ```markdown
-# 🌿 BistroBliss  
+# 🌿 BistroBliss
 
-BistroBliss is a modern **Angular 15 application** built for restaurant management.  
-It features authentication, dashboards, order handling, and a clean modular architecture.  
-
----
-
-## 📂 Project Structure  
-Got it 👍 — the **Project Structure** block lost its formatting when you pasted it.
-Here’s the fixed, clean `README.md` section with proper **code block formatting**:
+BistroBliss is a modern **Angular 15** application for restaurant management.  
+It provides authentication, dashboards, order management, and a clean modular architecture designed for easy extension.
 
 ---
 
-```markdown
-## 📂 Project Structure  
+## 🔑 Features
+
+- Authentication (login / signup)
+- Dashboard and admin views
+- Order management
+- Reusable component structure
+- Mock REST API support via `json-server`
+
+---
+
+## 📂 Project structure
 
 ```
 
-src/app
-┣ components/          # Reusable UI components
-┃ ┣ auth/              # Authentication (login/signup)
-┃ ┣ carousel/          # Image carousel
-┃ ┣ dashboard/         # Dashboard view
-┃ ┣ dashnav/           # Dashboard navigation
-┃ ┣ landing/           # Landing page
-┃ ┗ orders/            # Order management
-┣ resto/               # Restaurant-specific modules
-┣ models/              # Data models & interfaces
-┣ services/            # API and business logic
-┣ app-routing.module.ts  # App routing
-┣ app.module.ts          # Root Angular module
-┗ app.component.\*        # Root Angular component
+src/
+├─ app/
+│  ├─ components/
+│  │  ├─ auth/         # Authentication (login/signup)
+│  │  ├─ carousel/     # Image carousel
+│  │  ├─ dashboard/    # Dashboard view
+│  │  ├─ dashnav/      # Dashboard navigation
+│  │  ├─ landing/      # Landing page
+│  │  └─ orders/       # Order management
+│  ├─ resto/           # Restaurant-specific modules
+│  ├─ models/          # TS interfaces and models
+│  ├─ services/        # API calls and business logic
+│  ├─ app-routing.module.ts
+│  ├─ app.module.ts
+│  └─ app.component.\*
+├─ assets/             # Images, icons, static files
+├─ index.html
+├─ main.ts
+├─ styles.css
+├─ db.json             # Mock API data (json-server)
+└─ README.md
 
-```
-```
+````
 
 ---
 
-👉 If you want, I can give you the **entire README again** with this fix included so you can just copy-paste it straight into GitHub. Want me to do that?
+## 🚀 Getting started (local)
 
----
+### Prerequisites
+- Node.js (LTS recommended)
+- npm or Yarn
+- Angular CLI (optional for convenience): `npm i -g @angular/cli`
 
-## 🚀 Getting Started  
-
-### 1. Clone the repository  
+### Clone & install
 ```bash
 git clone https://github.com/michelleaijo/bistroBliss.git
 cd bistroBliss
-````
-
-### 2. Install dependencies
-
-```bash
 npm install
 # or
 yarn install
-```
+````
 
-### 3. Run the development server
+### Run dev server
 
 ```bash
 ng serve
 ```
 
-Navigate to 👉 [http://localhost:4200](http://localhost:4200).
-The app will reload automatically when source files are updated.
+Open: [http://localhost:4200](http://localhost:4200) — the app reloads automatically on code changes.
 
 ---
 
-## 🗄️ Mock Backend (json-server)
+## 🗄 Mock backend (json-server)
 
-This project includes a `db.json` file for simulating a REST API.
-
-Run:
+A simple mock API is included in `db.json`. Start it with:
 
 ```bash
 npx json-server --watch db.json --port 3000
 ```
 
-The mock API will be available at:
-👉 `http://localhost:3000/`
+Mock API base: `http://localhost:3000/`
+
+Adjust service endpoints in your Angular services if the base URL differs.
 
 ---
 
-## 🧪 Testing
-
-### Unit tests
+## 🧪 Scripts & useful commands
 
 ```bash
+# start dev server
+ng serve
+
+# build production bundle
+ng build --configuration production
+
+# run unit tests (Karma + Jasmine)
 ng test
-```
 
-Runs unit tests via [Karma](https://karma-runner.github.io).
-
-### End-to-end tests
-
-```bash
+# run e2e tests (if configured)
 ng e2e
+
+# lint (if configured)
+ng lint
+
 ```
 
-Executes e2e tests using a chosen framework.
+---
+
+## 🤝 Contributing
+
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feat/your-feature`
+3. Make changes and commit with clear messages.
+4. Push and open a Pull Request — describe the changes and any testing steps.
 
 ---
 
-## 🛠️ Tech Stack
+## 📝 Notes & tips
 
-* **Angular 15 (CLI v15.2.11)**
-* **TypeScript**
-* **json-server** (mock REST API)
-* **Karma & Jasmine** (testing)
-
----
-
-## 📚 Resources
-
-* [Angular Documentation](https://angular.io/docs)
-* [Angular CLI Reference](https://angular.io/cli)
-* [json-server](https://github.com/typicode/json-server)
+* Keep components small and focused; put shared logic in services.
+* Use environment files for API base URLs (`src/environments/`).
+* If you use `json-server`, remember it's for development only — replace with a real backend for production.
 
 ---
 
-✨ **BistroBliss** – A clean, modular Angular project for building scalable restaurant management solutions.
+✨ **BistroBliss** — clean, modular, and ready to extend.
