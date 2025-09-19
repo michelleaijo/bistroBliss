@@ -1,20 +1,5 @@
 ```markdown
-# 🌿 BistroBliss
 
-BistroBliss is a modern **Angular 15** application for restaurant management.  
-It provides authentication, dashboards, order management, and a clean modular architecture designed for easy extension.
-
----
-
-## 🔑 Features
-
-- Authentication (login / signup)
-- Dashboard and admin views
-- Order management
-- Reusable component structure
-- Mock REST API support via `json-server`
-
----
 
 ## 📂 Project structure
 
